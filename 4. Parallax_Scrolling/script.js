@@ -47,3 +47,13 @@ document
       element.setAttribute("id", "active-menu");
     });
   });
+
+const link = document.querySelector("a[href='#document-title']");
+
+link.addEventListener("click", () => {
+  event.preventDefault();
+
+  document.querySelector("#document-title").scrollIntoView({
+    behavior: "smooth",
+  });
+});
