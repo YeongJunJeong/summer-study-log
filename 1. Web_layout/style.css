@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* 이상한 여백 없앰 */
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Serif KR", serif;
+}
+
+/* 링크 밑줄, 색깔 바뀜 없앰 */
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  width: 960px;
+  /* 가운데 모으기 */
+  margin: 0 auto;
+}
+
+nav {
+  height: 80px;
+  background-color: crimson;
+  line-height: 80px;
+}
+
+/* float된 부분 막는 과정 */
+nav::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.nav-logo {
+  font-size: 30px;
+  float: left;
+  margin: 0;
+}
+
+.nav-menu {
+  float: right;
+}
+
+.nav-btn {
+  list-style-type: none;
+  margin: 0;
+}
+
+ul.nav-btn > li {
+  float: left;
+  margin-left: 25px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.hd {
+  position: relative;
+  height: 600px;
+  text-align: center;
+}
+
+.hd-title {
+  font-size: 65px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-top: 200px;
+}
+.hd-content {
+  font-size: 25px;
+}
+
+.hd:before {
+  content: "";
+  display: block;
+  /* relative 내에서 absolute 해라 */
+  position: absolute;
+  /* 왼쪽, 위부터 차례로 채우겠다 */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-image: url("./image_2.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.hd .container {
+  position: relative;
+  color: black;
+}
+
+.sec {
+  text-align: center;
+  padding: 100px 0;
+  background-color: bisque;
+}
+
+.sec article {
+  float: left;
+  width: 300px;
+  margin-right: 30px;
+}
+
+/* 마지막은 선언하지 않겠다 */
+.sec article:last-child {
+  margin-right: 0;
+}
+
+.sec article img {
+  width: 100%;
+  height: auto;
+}
+
+.carg-img {
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+}
+
+.sec::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.ft {
+  padding: 15px;
+  text-align: center;
+  background-color: crimson;
+  font-weight: bold;
+}
