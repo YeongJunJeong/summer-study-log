@@ -16,26 +16,30 @@ const mountain5 = document.getElementById("mountain5");
 const mountain6 = document.getElementById("mountain6");
 const mountain7 = document.getElementById("mountain7");
 
+let clientWidth = document.documentElement.clientWidth;
+
 window.addEventListener("scroll", () => {
-  const scrollY = window.scrollY;
+  if (clientWidth > 800) {
+    const scrollY = window.scrollY;
 
-  sun.style.transform = `translateY(${scrollY * 1.2}px)`;
+    sun.style.transform = `translateY(${scrollY * 1.2}px)`;
 
-  grayClouds.style.transform = `translateX(${scrollY * 0.3}px)`;
-  whiteClouds.style.transform = `translateX(-${scrollY * 0.3}px)`;
+    grayClouds.style.transform = `translateX(${scrollY * 0.3}px)`;
+    whiteClouds.style.transform = `translateX(-${scrollY * 0.3}px)`;
 
-  bird1.style.transform = `translateX(-${scrollY * 0.3}px)`;
-  bird2.style.transform = `translateX(-${scrollY}px)`;
-  bird3.style.transform = `translateX(${scrollY}px)`;
+    bird1.style.transform = `translateX(-${scrollY * 0.3}px)`;
+    bird2.style.transform = `translateX(-${scrollY}px)`;
+    bird3.style.transform = `translateX(${scrollY}px)`;
 
-  mountain0.style.transform = `translateY(${scrollY * 0.95}px)`;
-  mountain1.style.transform = `translateY(${scrollY * 0.93}px)`;
-  mountain2.style.transform = `translateY(${scrollY * 0.9}px)`;
-  mountain3.style.transform = `translateY(${scrollY * 0.8}px)`;
-  mountain4.style.transform = `translateY(${scrollY * 0.7}px)`;
-  mountain5.style.transform = `translateY(${scrollY * 0.6}px)`;
-  mountain6.style.transform = `translateY(${scrollY * 0.3}px)`;
-  mountain7.style.transform = `translateY(${scrollY * 0.1}px)`;
+    mountain0.style.transform = `translateY(${scrollY * 0.95}px)`;
+    mountain1.style.transform = `translateY(${scrollY * 0.93}px)`;
+    mountain2.style.transform = `translateY(${scrollY * 0.9}px)`;
+    mountain3.style.transform = `translateY(${scrollY * 0.8}px)`;
+    mountain4.style.transform = `translateY(${scrollY * 0.7}px)`;
+    mountain5.style.transform = `translateY(${scrollY * 0.6}px)`;
+    mountain6.style.transform = `translateY(${scrollY * 0.3}px)`;
+    mountain7.style.transform = `translateY(${scrollY * 0.1}px)`;
+  }
 });
 
 document
@@ -56,4 +60,30 @@ link.addEventListener("click", () => {
   document.querySelector("#document-title").scrollIntoView({
     behavior: "smooth",
   });
+});
+
+window.addEventListener("resize", () => {
+  clientWidth = document.documentElement.clientWidth;
+
+  if (clientWidth < 800) {
+    const scrollY = window.scrollY;
+
+    sun.style.transform = `translateY(${0}px)`;
+
+    grayClouds.style.transform = `translateX(${0}px)`;
+    whiteClouds.style.transform = `translateX(-${0}px)`;
+
+    bird1.style.transform = `translateX(-${0}px)`;
+    bird2.style.transform = `translateX(-${0}px)`;
+    bird3.style.transform = `translateX(${0}px)`;
+
+    mountain0.style.transform = `translateY(${0}px)`;
+    mountain1.style.transform = `translateY(${0}px)`;
+    mountain2.style.transform = `translateY(${0}px)`;
+    mountain3.style.transform = `translateY(${0}px)`;
+    mountain4.style.transform = `translateY(${0}px)`;
+    mountain5.style.transform = `translateY(${0}px)`;
+    mountain6.style.transform = `translateY(${0}px)`;
+    mountain7.style.transform = `translateY(${0}px)`;
+  }
 });
