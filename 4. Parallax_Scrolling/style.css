@@ -220,6 +220,7 @@ a {
     flex-direction: row;
   }
 }
+
 .mountain-content-wrapper {
   display: flex;
   flex-direction: column;
