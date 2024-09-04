@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Interactive Web</title>
+  </head>
+  <body>
+    <div class="cursor">
+      <div class="cursor__default">
+        <span class="cursor__default__inner"> </span>
+      </div>
+      <div class="cursor__trace">
+        <div class="cursor__trace__inner"></div>
+      </div>
+    </div>
+    <section class="preloader shown-area">
+      <button class="preloader__btn">
+        <span class="preloader__btn_hold">Hold</span>
+      </button>
+    </section>
+
+    <section class="header hidden-area">
+      <span class="circle" id="circle-1"></span>
+      <span class="circle" id="circle-2"></span>
+      <img id="cube__image_1" src="./image/Lovepik_com-401467010-cube.png" alt="cube image" class="cude__image" />
+      <img id="cube__image_2" src="./image/Lovepik_com-401467010-cube.png" alt="cube image" class="cude__image" />
+      <img id="cube__image_3" src="./image/Lovepik_com-401467010-cube.png" alt="cube image" class="cude__image" />
+      <img id="cube__image_4" src="./image/Lovepik_com-401467010-cube.png" alt="cube image" class="cude__image" />
+      <h1 class="header__title">
+        <div>LAST ART</div>
+        <div>PROJECTS</div>
+      </h1>
+    </section>
+    <section class="poster hidden-area">
+      <div class="poster__parallax">
+        <div id="poster-image_wrapper_1" class="poster-image_wrapper">
+          <img id="poster-iamge_1" src="./image/poster_image_1.png" alt="" class="poster-image" />
+        </div>
+        <div id="poster-image_wrapper_2" class="poster-image_wrapper">
+          <img id="poster-iamge_2" src="./image/poster_image_2.png" alt="" class="poster-image" />
+        </div>
+        <div id="poster-image_wrapper_3" class="poster-image_wrapper">
+          <img id="poster-iamge_3" src="./image/poster_image_3.png" alt="" class="poster-image" />
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="script.js"></script>
+</html>

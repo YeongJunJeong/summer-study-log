@@ -162,3 +162,20 @@ window.addEventListener("scroll", () => {
     sliderIndex.innerText = `${currentImage + 1}/${sliderImages.length}`;
   });
 });
+
+const preloaderBtn = document.querySelector(".preloader__btn");
+
+let intervalId = null;
+let scale = 1;
+
+function setPreloaderStyle(scale) {
+  preloaderBtn.style.transform = `scale(${scale})`;
+}
+
+preloaderBtn.addEventListener("mousedown", () => {
+  intervalId = setInterval(() => {
+    scale += 0.175;
+
+    setPreloaderStyle(scale);
+  }, 10);
+});
